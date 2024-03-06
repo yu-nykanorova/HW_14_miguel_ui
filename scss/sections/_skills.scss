@@ -1,0 +1,63 @@
+.skills {
+    text-align: center;
+    margin-bottom: 128rem;
+
+    &__title {
+        margin-bottom: 60rem;
+        font-weight: 500;
+        font-size: 34rem;
+        line-height: 118%;
+        letter-spacing: 0.01em;
+        color: var(--blanco);
+    }
+
+    &__box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 24rem;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        text-align: left;
+        border-radius: 8rem;
+        padding: 24rem;
+        background: var(--rellenos);
+        flex: 0 1 calc((100% - 24rem * 2)/3);
+        align-self: stretch;
+        @include desktop-small {
+            flex: 0 1 calc((100% - 24rem)/2);
+        }
+        @include tablet-xs {
+            flex: 0 1 100%;
+            
+        }
+    }
+    &__item-img {
+        margin-bottom: 10rem;
+        display: flex;
+        align-items: center;
+    }
+
+    &__item-title {
+        margin-bottom: 10rem;
+        font-weight: 500;
+        font-size: 34rem;
+        line-height: 118%;
+        letter-spacing: 0.01em;
+        color: var(--blanco);
+    }
+
+    &__item-desc {
+        font-weight: 400;
+        font-size: 16rem;
+        line-height: 175%;
+        letter-spacing: 0.03em;
+        color: var(--blanco);
+    }
+
+}

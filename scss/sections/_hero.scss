@@ -1,0 +1,51 @@
+.hero {
+    margin-top: 64rem;
+    margin-bottom: 128rem;
+    display: flex;
+    align-items: center;
+    gap: 140rem;
+    @include desktop-small {
+        gap: 20rem;
+    }
+    @include tablet {
+        flex-direction: column;
+        margin-bottom: 60rem;
+    }
+
+    &__image {
+        border-radius: 8rem;
+        max-width: 448rem;
+        flex-shrink: 0;
+        img {
+            border-radius: inherit;
+        }
+    }
+
+    &__title {
+        margin-bottom: 24rem;
+        font-weight: 700;
+        font-size: 60rem;
+        line-height: 118%;
+        letter-spacing: -0.01em;
+        color: var(--blanco);
+    }
+
+    &__desc {
+        font-size: 16rem;
+        line-height: 175%;
+        letter-spacing: 0.03em;
+        color: var(--blanco);
+        
+        span {
+            font-weight: 500;
+            line-height: 125%;
+            letter-spacing: 0.01em;
+        }
+    }
+
+    &__email {
+        @extend .hero__desc;
+        display: block;
+        color: var(--primario);
+    }
+}

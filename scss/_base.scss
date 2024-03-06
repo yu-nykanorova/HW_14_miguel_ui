@@ -1,0 +1,23 @@
+html {
+    font-size: 1px; 
+    @include mobile {
+        font-size: 0.8px;
+    }   
+    @include mobile-xs {
+        font-size: 0.6px;
+    }   
+}
+
+body {
+    font-size: 16rem;
+    background: var(--fondo);
+    color: var(--blanco);
+    font-family: var(--font-family);
+
+}
+
+.container {
+    max-width: 1196rem;
+    margin-inline: auto;
+    padding: 0 20rem;
+}
