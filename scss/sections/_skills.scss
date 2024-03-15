@@ -29,6 +29,10 @@
         background: var(--rellenos);
         flex: 0 1 calc((100% - 24rem * 2)/3);
         align-self: stretch;
+        transition: all .2s ease-in-out;
+        &:hover {
+            box-shadow: 0 0 15px 0 rgba(255, 255, 255, 0.15);
+        }
         @include desktop-small {
             flex: 0 1 calc((100% - 24rem)/2);
         }
@@ -58,6 +62,9 @@
         line-height: 175%;
         letter-spacing: 0.03em;
         color: var(--blanco);
+        @include tablet-xs {
+            font-size: 18rem;
+        }
     }
 
 }

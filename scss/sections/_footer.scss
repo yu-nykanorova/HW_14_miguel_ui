@@ -13,12 +13,24 @@
                 top: -60rem;
                 left: 0;
          }
+        @include tablet-xs {
+            top: 20rem;
+        }
     }
 
     &__info {
         display: flex;
         gap: 129rem;
         margin-bottom: 64rem;
+        @include tablet {
+            gap: 80rem;
+        }
+        @include tablet-xs {
+            gap: 30rem;
+        }
+        @include mobile {
+            flex-direction: column;
+        }
     }
     
     &__logo {
@@ -27,29 +39,54 @@
         font-size: 24rem;
         line-height: 133%;
         color: var(--blanco);
+        transition: all .2s ease-in-out;
+        &:hover {
+            transform: scale(1.1);
+        }
     }
+
     &__nav {
         display: flex;
         gap: 129rem;
+        @include tablet {
+            gap: 80rem;
+        }
+        @include tablet-xs {
+            gap: 30rem;
+        }
+        @include mobile {
+            gap: 50rem;
+            flex-wrap: wrap;
+        }
     }
+
     &__ul {
         display: flex;
         flex-direction: column;
         gap: 24rem;
     }
-    &__li.social_icons {
+
+   &__li.social_icons {
             display: flex;
             gap: 16rem;
     }
+
     &__a {
+        display: inline-block;
         font-weight: 400;
         font-size: 14rem;
         line-height: 143%;
         letter-spacing: 0.02em;
         color: var(--blanco);
+        &:not(.footer__nav_title):hover {
+            transform: scale(1.1);
+        }
+        @include tablet-xs {
+            font-size: 18rem;
+        }
     }
 
-    &__nav_title a {
+    &__nav_title {
         font-family: var(--font-family);
         font-weight: 500;
         font-size: 16rem;
@@ -59,11 +96,13 @@
     }
 
     &__social {
-      
+        transition: all .2s ease-in-out;
+        &:hover {
+            transform: scale(1.1);
+        }
     }
 
     &__line_bottom {
-        color: #fff;
         position: relative;
         display: block;
         &::before {
@@ -86,7 +125,3 @@
     }
 }
 
-// .social_icons {
-//     display: flex;
-//     gap: 80rem;
-// }

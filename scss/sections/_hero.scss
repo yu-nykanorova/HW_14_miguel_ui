@@ -35,6 +35,9 @@
         line-height: 175%;
         letter-spacing: 0.03em;
         color: var(--blanco);
+        @include tablet-xs {
+            font-size: 18rem;
+        }
         
         span {
             font-weight: 500;
